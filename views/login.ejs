@@ -1,0 +1,50 @@
+<%- include ("partials/header") %>
+<body class="d-flex h-100 text-center text-white bg-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="float-md-start mb-0">Wilson System</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Login Here</a>
+          <a class="nav-link" href="/register">Sign Up Today</a>
+        </nav>
+      </div>
+    </header>
+
+    <form action="/login" method="POST">
+      <%- include("partials/message") %> 
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="username"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          name="password"
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <footer class="mt-auto text-white-50">
+      <p>
+        Cover template for
+        <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by
+        <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.
+      </p>
+    </footer>
+  </div>
+</body>
